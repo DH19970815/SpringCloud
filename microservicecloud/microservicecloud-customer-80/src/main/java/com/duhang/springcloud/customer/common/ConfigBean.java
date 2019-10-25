@@ -1,11 +1,10 @@
-package common;
+package com.duhang.springcloud.customer.common;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
-@Configurable
+@Configuration
 public class ConfigBean {
 
     @Bean

@@ -10,7 +10,7 @@ import com.duhang.springcloud.entities.Dept;
 @Mapper
 public interface DeptDao {
 
-	public boolean addDept(Dept dept);
+	public int addDept(Dept dept);
 	public List<Dept> findAll();
 	public Dept findId(Dept dept);
 	public Dept findIdTwo(Integer id);
