@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duhang.springcloud.dept.dao.DeptDao">
+
+   <insert id="addDept">
+      insert into dept (dname,db_source) values(#{name},database())
+   </insert>
+   
+   <select id="findId" resultType="com.duhang.springcloud.entities.Dept">
+      select * from dept where deptno=#{id}
+   </select>
+
+   <select id="findIdTwo" resultType="com.duhang.springcloud.entities.Dept">
+      select dname as name, db_source as source from dept where deptno=#{id}
+   </select>
+   
+   <update id="update">
+      update dept set dname=#{name} where deptno=#{id}
+   </update>
+</mapper>
